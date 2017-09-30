@@ -42,3 +42,13 @@ IMHO, the arguability of some of the way to provide context to exceptions does n
 
 And from there, you get mutability so ...
 
+## Installation
+
+ContextException can be installed using composer :
+```
+composer require "fab2s/context-exception"
+```
+
+## License
+
+ContextException is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
