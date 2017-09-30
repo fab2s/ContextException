@@ -1,5 +1,5 @@
 {
-    "name" : "fab2s/contextexception",
+    "name" : "fab2s/context-exception",
     "description" : "A context exception interface and implementation",
     "type" : "library",
     "authors" : [{

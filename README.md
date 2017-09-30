@@ -1,10 +1,10 @@
 # ContextException
 
-Exception logging proves particularily usefull to monitor appllication failure, but as it is, cannot provide with contextual data that could help out when processing those exception logs.
+Exception logging proves particularly useful to monitor application failure, but as it is, cannot provide with contextual data that could help out when processing those exception logs.
 
 This Exception interface and implementation is just a step towards providing context to exceptions allowing you to interact with such exception and log them together with the extra information you would have provided.
 
-It goes particularily well with [Monolog](https://github.com/Seldaek/monolog) and global exception handling where you can directly and globally add exception context to your log (when available) which may be of virtually any nature (monolog has a lot of handler and you can add mmore yourself to suite your need).
+It goes particularly well with [Monolog](https://github.com/Seldaek/monolog) and global exception handling where you can directly and globally add exception context to your log (when available) which may be of virtually any nature (monolog has a lot of handler and you can add more yourself to suite your need).
 
 In your exception handler (or just a `try{}catch{}`:
 ```php
@@ -28,7 +28,7 @@ $exception->setContext($contextData);
 throw $exception;
 ```
 
-IMHO, the arguability of some of the way to provide context to exceptions does not match the usefullness they provide IRL. I'm not saying that the conventional way to throw should not be in principle prefered, but I definetely find IRL use for things like :
+IMHO, the arguability of some of the way to provide context to exceptions does not match the usefulness they provide IRL. I'm not saying that the conventional way to throw should not be in principle preferred, but I definitely find IRL use for things like :
 ```php
 } catch (ContextException $e) {
     // access context
