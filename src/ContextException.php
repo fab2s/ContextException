@@ -2,7 +2,7 @@
 
 /*
  * This file is part of ContextException.
- *     (c) Fabrice de Stefanis / https://github.com/fab2s/ContextException
+ *     (c) Fabrice de Stefanis / https://github.com/fab2s/ContextExceptio
  * This source file is licensed under the MIT license which you will
  * find in the LICENSE file or at https://opensource.org/licenses/MIT
  */
@@ -47,9 +47,9 @@ class ContextException extends \Exception implements ContextExceptionInterface
     }
 
     /**
-     * Set context
+     * @param array $context
      *
-     * @return array
+     * @return $this
      */
     public function setContext(array $context)
     {

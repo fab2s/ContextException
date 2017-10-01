@@ -2,7 +2,7 @@
 
 /*
  * This file is part of ContextException.
- *     (c) Fabrice de Stefanis / https://github.com/fab2s/ContextException
+ *     (c) Fabrice de Stefanis / https://github.com/fab2s/ContextExceptio
  * This source file is licensed under the MIT license which you will
  * find in the LICENSE file or at https://opensource.org/licenses/MIT
  */
@@ -25,10 +25,6 @@ class ContextExceptionTest extends \TestCase
         'field2' => 'value2',
     ];
 
-    /**
-     * @covers \ContextException::setContext
-     * @covers \ContextException::getContext
-     */
     public function testSetContext()
     {
         $e = new ContextException;
@@ -37,8 +33,6 @@ class ContextExceptionTest extends \TestCase
     }
 
     /**
-     * @covers \ContextException::mergeContext
-     *
      * @throws ContextException
      */
     public function testMergeContext()
@@ -50,8 +44,6 @@ class ContextExceptionTest extends \TestCase
     }
 
     /**
-     * @covers \ContextException::__construct
-     *
      * @throws ContextException
      */
     public function testContextExceptionNoContext()
@@ -61,8 +53,6 @@ class ContextExceptionTest extends \TestCase
     }
 
     /**
-     * @covers \ContextException::__construct
-     *
      * @throws ContextException
      */
     public function testContextExceptionWithContext()
@@ -77,8 +67,6 @@ class ContextExceptionTest extends \TestCase
     }
 
     /**
-     * @covers \ContextException::__construct
-     *
      * @throws ContextException
      */
     public function testContextExceptionWithSetContext()
@@ -93,8 +81,6 @@ class ContextExceptionTest extends \TestCase
     }
 
     /**
-     * @covers \ContextException::__construct
-     *
      * @throws ContextException
      */
     public function testContextExceptionWithSetContextVariant()
