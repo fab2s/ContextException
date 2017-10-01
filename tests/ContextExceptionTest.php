@@ -25,6 +25,10 @@ class ContextExceptionTest extends \TestCase
         'field2' => 'value2',
     ];
 
+    /**
+     * @covers \fab2s\ContextException\ContextException::setContext
+     * @covers \fab2s\ContextException\ContextException::getContext
+     */
     public function testSetContext()
     {
         $e = new ContextException;
@@ -33,6 +37,8 @@ class ContextExceptionTest extends \TestCase
     }
 
     /**
+     * @covers \fab2s\ContextException\ContextException::mergeContext
+     *
      * @throws ContextException
      */
     public function testMergeContext()
@@ -44,6 +50,8 @@ class ContextExceptionTest extends \TestCase
     }
 
     /**
+     * @covers \fab2s\ContextException\ContextException::__construct
+     *
      * @throws ContextException
      */
     public function testContextExceptionNoContext()
@@ -53,6 +61,8 @@ class ContextExceptionTest extends \TestCase
     }
 
     /**
+     * @covers \fab2s\ContextException\ContextException::__construct
+     *
      * @throws ContextException
      */
     public function testContextExceptionWithContext()
@@ -67,6 +77,8 @@ class ContextExceptionTest extends \TestCase
     }
 
     /**
+     * @covers \fab2s\ContextException\ContextException::__construct
+     *
      * @throws ContextException
      */
     public function testContextExceptionWithSetContext()
@@ -81,6 +93,8 @@ class ContextExceptionTest extends \TestCase
     }
 
     /**
+     * @covers \fab2s\ContextException\ContextException::__construct
+     *
      * @throws ContextException
      */
     public function testContextExceptionWithSetContextVariant()
