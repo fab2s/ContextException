@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/fab2s/ContextException.svg?branch=master)](https://travis-ci.org/fab2s/ContextException) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/d11fb66a-3e46-4b88-813a-04bd105d3103/mini.png)](https://insight.sensiolabs.com/projects/d11fb66a-3e46-4b88-813a-04bd105d3103) [![Code Climate](https://codeclimate.com/github/fab2s/ContextException/badges/gpa.svg)](https://codeclimate.com/github/fab2s/ContextException) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bc3d2572e1a74996883095054ec3c937)](https://www.codacy.com/app/fab2s/ContextException) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fab2s/ContextException/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fab2s/ContextException/?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![License](https://poser.pugx.org/fab2s/nodalflow/license)](https://packagist.org/packages/fab2s/yaetl)
 
-Exception logging proves particularly useful to monitor application failure, but as it is, cannot provide with contextual data that could help out when processing those exception logs.gu
+Exception logging proves particularly useful to monitor application failure, but as it is, cannot provide with contextual data that could help out when processing those exception logs.
 
 This Exception interface and implementation is just a step towards providing context to exceptions allowing you to interact with such exception and log them together with the extra information you would have provided.
 
