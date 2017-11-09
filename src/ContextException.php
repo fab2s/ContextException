@@ -24,12 +24,12 @@ class ContextException extends \Exception implements ContextExceptionInterface
     /**
      * Instantiate an exception
      *
-     * @param string          $message
-     * @param int             $code
-     * @param null|\Exception $previous
-     * @param array           $context
+     * @param string                     $message
+     * @param int                        $code
+     * @param null|\Exception|\Throwable $previous
+     * @param array                      $context
      */
-    public function __construct($message = '', $code = 0, \Exception $previous = null, array $context = [])
+    public function __construct($message = '', $code = 0, $previous = null, array $context = [])
     {
         $this->context = $context;
 
