@@ -6,7 +6,10 @@
         "name" : "Fabrice de Stefanis"
     }],
     "keywords" : [
-        "PHP Context Exception"
+        "PHP",
+        "Context",
+        "Exception",
+        "Interface"
     ],
     "license" : [
         "MIT"

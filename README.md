@@ -51,6 +51,10 @@ ContextException can be installed using composer :
 composer require "fab2s/context-exception"
 ```
 
+## Requirements
+
+ContextException is tested against php 5.6, 7.0, 7.1, 7.2 and 7.3.
+
 ## License
 
 ContextException is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
