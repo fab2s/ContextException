@@ -46,14 +46,27 @@ And from there, you get mutability so ...
 
 ## Installation
 
-ContextException can be installed using composer :
+ContextException can be installed using composer:
+
 ```
 composer require "fab2s/context-exception"
 ```
 
+If you want to specifically install the php >=7.1.0 version, use:
+
+```
+composer require "fab2s/context-exception" ^1
+```
+
+If you want to specifically install the php 5.6/7.0 version, use:
+
+```
+composer require "fab2s/context-exception" ^0
+```
+
 ## Requirements
 
-ContextException is tested against php 5.6, 7.0, 7.1, 7.2 and 7.3.
+ContextException is tested against php 7.1, 7.2 and 7.3.
 
 ## License
 

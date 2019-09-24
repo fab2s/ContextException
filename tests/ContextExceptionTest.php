@@ -1,15 +1,15 @@
 <?php
 
 /*
- * This file is part of ContextException.
- *     (c) Fabrice de Stefanis / https://github.com/fab2s/ContextExceptio
+ * This file is part of ContextException
+ *     (c) Fabrice de Stefanis / https://github.com/fab2s/ContextException
  * This source file is licensed under the MIT license which you will
  * find in the LICENSE file or at https://opensource.org/licenses/MIT
  */
 
 use fab2s\ContextException\ContextException;
 
-class ContextExceptionTest extends \TestCase
+class ContextExceptionTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var array
@@ -57,7 +57,7 @@ class ContextExceptionTest extends \TestCase
     public function testContextExceptionNoContext()
     {
         $this->expectException(ContextException::class);
-        throw new ContextException('', 0, null);
+        throw new ContextException('', 0, new \Exception);
     }
 
     /**
