@@ -1,8 +1,8 @@
 <?php
 
 /*
- * This file is part of ContextException.
- *     (c) Fabrice de Stefanis / https://github.com/fab2s/ContextExceptio
+ * This file is part of ContextException
+ *     (c) Fabrice de Stefanis / https://github.com/fab2s/ContextException
  * This source file is licensed under the MIT license which you will
  * find in the LICENSE file or at https://opensource.org/licenses/MIT
  */
@@ -24,12 +24,12 @@ class ContextException extends \Exception implements ContextExceptionInterface
     /**
      * Instantiate an exception
      *
-     * @param string                     $message
-     * @param int                        $code
-     * @param null|\Exception|\Throwable $previous
-     * @param array                      $context
+     * @param string          $message
+     * @param int             $code
+     * @param null|\Throwable $previous
+     * @param array           $context
      */
-    public function __construct($message = '', $code = 0, $previous = null, array $context = [])
+    public function __construct(string $message = '', int $code = 0, ? \Throwable $previous = null, array $context = [])
     {
         $this->context = $context;
 
@@ -41,7 +41,7 @@ class ContextException extends \Exception implements ContextExceptionInterface
      *
      * @return array
      */
-    public function getContext()
+    public function getContext(): array
     {
         return $this->context;
     }
@@ -49,9 +49,9 @@ class ContextException extends \Exception implements ContextExceptionInterface
     /**
      * @param array $context
      *
-     * @return $this
+     * @return static
      */
-    public function setContext(array $context)
+    public function setContext(array $context): ContextExceptionInterface
     {
         $this->context = $context;
 
@@ -63,11 +63,11 @@ class ContextException extends \Exception implements ContextExceptionInterface
      *
      * @param array $moreContext The context to merge to the (eventually) existing one
      *
-     * @return $this
+     * @return static
      */
-    public function mergeContext(array $moreContext)
+    public function mergeContext(array $moreContext): ContextExceptionInterface
     {
-        $this->context = array_replace_recursive(isset($this->context) ? $this->context : [], $moreContext);
+        $this->context = array_replace_recursive($this->context ?? [], $moreContext);
 
         return $this;
     }
