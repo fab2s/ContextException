@@ -66,7 +66,7 @@ composer require "fab2s/context-exception" ^0
 
 ## Requirements
 
-ContextException is tested against php 7.1, 7.2 and 7.3.
+ContextException is tested against php 7.1, 7.2, 7.3 and 7.4
 
 ## License
 
