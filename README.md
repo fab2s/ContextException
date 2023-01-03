@@ -1,6 +1,6 @@
 # ContextException
 
-[![Build Status](https://travis-ci.org/fab2s/ContextException.svg?branch=master)](https://travis-ci.org/fab2s/ContextException) [![Total Downloads](https://poser.pugx.org/fab2s/context-exception/downloads)](https://packagist.org/packages/fab2s/context-exception) [![Monthly Downloads](https://poser.pugx.org/fab2s/context-exception/d/monthly)](https://packagist.org/packages/fab2s/context-exception) [![Latest Stable Version](https://poser.pugx.org/fab2s/context-exception/v/stable)](https://packagist.org/packages/fab2s/context-exception) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/d11fb66a-3e46-4b88-813a-04bd105d3103/mini.png)](https://insight.sensiolabs.com/projects/d11fb66a-3e46-4b88-813a-04bd105d3103) [![Code Climate](https://codeclimate.com/github/fab2s/ContextException/badges/gpa.svg)](https://codeclimate.com/github/fab2s/ContextException) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bc3d2572e1a74996883095054ec3c937)](https://www.codacy.com/app/fab2s/ContextException) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fab2s/ContextException/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fab2s/ContextException/?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![PHPPackages Referenced By](http://phppackages.org/p/fab2s/context-exception/badge/referenced-by.svg)](http://phppackages.org/p/fab2s/context-exception) [![License](https://poser.pugx.org/fab2s/nodalflow/license)](https://packagist.org/packages/fab2s/yaetl)
+[![CI](https://github.com/fab2s/ContextException/actions/workflows/ci.yml/badge.svg)](https://github.com/fab2s/ContextException/actions/workflows/ci.yml) [![QA](https://github.com/fab2s/ContextException/actions/workflows/qa.yml/badge.svg)](https://github.com/fab2s/ContextException/actions/workflows/qa.yml) [![Total Downloads](https://poser.pugx.org/fab2s/context-exception/downloads)](https://packagist.org/packages/fab2s/context-exception) [![Monthly Downloads](https://poser.pugx.org/fab2s/context-exception/d/monthly)](https://packagist.org/packages/fab2s/context-exception) [![Latest Stable Version](https://poser.pugx.org/fab2s/context-exception/v/stable)](https://packagist.org/packages/fab2s/context-exception) [![Code Climate](https://codeclimate.com/github/fab2s/ContextException/badges/gpa.svg)](https://codeclimate.com/github/fab2s/ContextException) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fab2s/ContextException/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fab2s/ContextException/?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![License](https://poser.pugx.org/fab2s/nodalflow/license)](https://packagist.org/packages/fab2s/yaetl)
 
 Exception logging proves particularly useful to monitor application failure, but as it is, cannot provide with contextual data that could help out when processing those exception logs.
 
@@ -37,8 +37,6 @@ IMHO, the arguability of some of the way to provide context to exceptions does n
     $context = $e->getContext();
     // set context in case there is none
     $e->setContext($context);
-    // and even add more context
-    $e->mergeContext($moreContext);
 }
 ```
 
@@ -50,6 +48,15 @@ ContextException can be installed using composer:
 
 ```
 composer require "fab2s/context-exception"
+```
+
+> V3.x introduces a breaking change in the `ContextExceptionInterface` which no more includes a signature for the constructor or even a merge function.
+> It introduce and handy `ContextExceptionTrait` you can use to implement your own implementation of `ContextExceptionInterface` without having to inherit `ContextException`
+
+If you want to stick to the previous interface :
+
+```
+composer require "fab2s/context-exception" ^2
 ```
 
 If you want to specifically install the php >=7.1.0 version, use:
