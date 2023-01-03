@@ -10,23 +10,36 @@
 namespace fab2s\ContextException;
 
 /**
- * Interface ContextExceptionInterface
+ * Trait ContextException
  */
-interface ContextExceptionInterface
+trait ContextExceptionTrait
 {
+    /**
+     * Exception context
+     *
+     * @var array
+     */
+    protected $context = [];
+
     /**
      * Get current exception context, useful for logging
      *
      * @return array
      */
-    public function getContext(): array;
+    public function getContext(): array
+    {
+        return $this->context;
+    }
 
     /**
-     * Set context
-     *
      * @param array $context
      *
      * @return static
      */
-    public function setContext(array $context): self;
+    public function setContext(array $context): ContextExceptionInterface
+    {
+        $this->context = $context;
+
+        return $this;
+    }
 }
