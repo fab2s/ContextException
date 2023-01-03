@@ -14,12 +14,7 @@ namespace fab2s\ContextException;
  */
 class ContextException extends \Exception implements ContextExceptionInterface
 {
-    /**
-     * Exception context
-     *
-     * @var array
-     */
-    protected $context = [];
+    use ContextExceptionTrait;
 
     /**
      * Instantiate an exception
@@ -34,41 +29,5 @@ class ContextException extends \Exception implements ContextExceptionInterface
         $this->context = $context;
 
         parent::__construct($message, $code, $previous);
-    }
-
-    /**
-     * Get current exception context, useful for logging
-     *
-     * @return array
-     */
-    public function getContext(): array
-    {
-        return $this->context;
-    }
-
-    /**
-     * @param array $context
-     *
-     * @return static
-     */
-    public function setContext(array $context): ContextExceptionInterface
-    {
-        $this->context = $context;
-
-        return $this;
-    }
-
-    /**
-     * Merge more context to current context
-     *
-     * @param array $moreContext The context to merge to the (eventually) existing one
-     *
-     * @return static
-     */
-    public function mergeContext(array $moreContext): ContextExceptionInterface
-    {
-        $this->context = array_replace_recursive($this->context ?? [], $moreContext);
-
-        return $this;
     }
 }

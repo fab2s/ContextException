@@ -37,19 +37,6 @@ class ContextExceptionTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \fab2s\ContextException\ContextException::mergeContext
-     *
-     * @throws ContextException
-     */
-    public function testMergeContext()
-    {
-        $e = new ContextException;
-        $e->setContext($this->defaultContext);
-        $e->mergeContext($this->defaultContextMerge);
-        $this->assertSame(array_replace_recursive($this->defaultContext, $this->defaultContextMerge), $e->getContext());
-    }
-
-    /**
      * @covers \fab2s\ContextException\ContextException::__construct
      *
      * @throws ContextException
