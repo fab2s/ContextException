@@ -37,7 +37,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-next": "2.0.x-dev"
+            "dev-next": "3.0.x-dev"
         }
     }
 }
