@@ -34,10 +34,5 @@
             "rm -f .*.cache"
         ],
         "fix": "@php php-cs-fixer fix --config=./.php-cs-fixer.dist.php -vvv"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-next": "3.0.x-dev"
-        }
     }
 }
