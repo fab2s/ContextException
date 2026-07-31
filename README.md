@@ -1,6 +1,6 @@
 # ContextException
 
-[![CI](https://github.com/fab2s/ContextException/actions/workflows/ci.yml/badge.svg)](https://github.com/fab2s/ContextException/actions/workflows/ci.yml) [![QA](https://github.com/fab2s/ContextException/actions/workflows/qa.yml/badge.svg)](https://github.com/fab2s/ContextException/actions/workflows/qa.yml) [![Total Downloads](https://poser.pugx.org/fab2s/context-exception/downloads)](https://packagist.org/packages/fab2s/context-exception) [![Monthly Downloads](https://poser.pugx.org/fab2s/context-exception/d/monthly)](https://packagist.org/packages/fab2s/context-exception) [![Latest Stable Version](https://poser.pugx.org/fab2s/context-exception/v/stable)](https://packagist.org/packages/fab2s/context-exception) [![Code Climate](https://codeclimate.com/github/fab2s/ContextException/badges/gpa.svg)](https://codeclimate.com/github/fab2s/ContextException) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fab2s/ContextException/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fab2s/ContextException/?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![License](https://poser.pugx.org/fab2s/nodalflow/license)](https://packagist.org/packages/fab2s/yaetl)
+[![CI](https://github.com/fab2s/ContextException/actions/workflows/ci.yml/badge.svg)](https://github.com/fab2s/ContextException/actions/workflows/ci.yml) [![QA](https://github.com/fab2s/ContextException/actions/workflows/qa.yml/badge.svg)](https://github.com/fab2s/ContextException/actions/workflows/qa.yml) [![Total Downloads](https://poser.pugx.org/fab2s/context-exception/downloads)](https://packagist.org/packages/fab2s/context-exception) [![Monthly Downloads](https://poser.pugx.org/fab2s/context-exception/d/monthly)](https://packagist.org/packages/fab2s/context-exception) [![Latest Stable Version](https://poser.pugx.org/fab2s/context-exception/v/stable)](https://packagist.org/packages/fab2s/context-exception) [![Code Climate](https://codeclimate.com/github/fab2s/ContextException/badges/gpa.svg)](https://codeclimate.com/github/fab2s/ContextException) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![License](https://poser.pugx.org/fab2s/nodalflow/license)](https://packagist.org/packages/fab2s/yaetl)
 
 Exception logging proves particularly useful to monitor application failure, but as it is, cannot provide with contextual data that could help out when processing those exception logs.
 
@@ -73,7 +73,7 @@ composer require "fab2s/context-exception" ^0
 
 ## Requirements
 
-ContextException is tested against php 7.1, 7.2, 7.3, 7.4, 8.0, 8.1 and 8.2
+ContextException is tested against php 8.2, 8.3, 8.4 and 8.5
 
 ## License
 

@@ -8,8 +8,11 @@
  */
 
 use fab2s\ContextException\ContextException;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\TestCase;
 
-class ContextExceptionTest extends \PHPUnit\Framework\TestCase
+#[CoversClass(ContextException::class)]
+class ContextExceptionTest extends TestCase
 {
     /**
      * @var array
@@ -25,10 +28,6 @@ class ContextExceptionTest extends \PHPUnit\Framework\TestCase
         'field2' => 'value2',
     ];
 
-    /**
-     * @covers \fab2s\ContextException\ContextException::setContext
-     * @covers \fab2s\ContextException\ContextException::getContext
-     */
     public function testSetContext()
     {
         $e = new ContextException;
@@ -37,8 +36,6 @@ class ContextExceptionTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \fab2s\ContextException\ContextException::__construct
-     *
      * @throws ContextException
      */
     public function testContextExceptionNoContext()
@@ -48,8 +45,6 @@ class ContextExceptionTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \fab2s\ContextException\ContextException::__construct
-     *
      * @throws ContextException
      */
     public function testContextExceptionWithContext()
@@ -64,8 +59,6 @@ class ContextExceptionTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \fab2s\ContextException\ContextException::__construct
-     *
      * @throws ContextException
      */
     public function testContextExceptionWithSetContext()
@@ -80,8 +73,6 @@ class ContextExceptionTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \fab2s\ContextException\ContextException::__construct
-     *
      * @throws ContextException
      */
     public function testContextExceptionWithSetContextVariant()
