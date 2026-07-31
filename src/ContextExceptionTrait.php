@@ -23,8 +23,6 @@ trait ContextExceptionTrait
 
     /**
      * Get current exception context, useful for logging
-     *
-     * @return array
      */
     public function getContext(): array
     {
@@ -32,8 +30,6 @@ trait ContextExceptionTrait
     }
 
     /**
-     * @param array $context
-     *
      * @return static
      */
     public function setContext(array $context): ContextExceptionInterface

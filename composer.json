@@ -28,10 +28,10 @@
     },
     "scripts": {
         "post-update-cmd": [
-            "rm -f .*.cache"
+            "rm -rf .*.cache"
         ],
         "post-install-cmd": [
-            "rm -f .*.cache"
+            "rm -rf .*.cache"
         ],
         "fix": [
             "Composer\\Config::disableProcessTimeout",
