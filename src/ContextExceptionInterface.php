@@ -16,15 +16,12 @@ interface ContextExceptionInterface
 {
     /**
      * Get current exception context, useful for logging
-     *
-     * @return array
      */
     public function getContext(): array;
 
     /**
      * Set context
      *
-     * @param array $context
      *
      * @return static
      */

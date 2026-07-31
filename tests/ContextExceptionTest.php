@@ -28,7 +28,7 @@ class ContextExceptionTest extends TestCase
         'field2' => 'value2',
     ];
 
-    public function testSetContext()
+    public function test_set_context()
     {
         $e = new ContextException;
         $e->setContext($this->defaultContext);
@@ -38,16 +38,16 @@ class ContextExceptionTest extends TestCase
     /**
      * @throws ContextException
      */
-    public function testContextExceptionNoContext()
+    public function test_context_exception_no_context()
     {
         $this->expectException(ContextException::class);
-        throw new ContextException('', 0, new \Exception);
+        throw new ContextException('', 0, new Exception);
     }
 
     /**
      * @throws ContextException
      */
-    public function testContextExceptionWithContext()
+    public function test_context_exception_with_context()
     {
         $this->expectException(ContextException::class);
         try {
@@ -61,7 +61,7 @@ class ContextExceptionTest extends TestCase
     /**
      * @throws ContextException
      */
-    public function testContextExceptionWithSetContext()
+    public function test_context_exception_with_set_context()
     {
         $this->expectException(ContextException::class);
         try {
@@ -75,7 +75,7 @@ class ContextExceptionTest extends TestCase
     /**
      * @throws ContextException
      */
-    public function testContextExceptionWithSetContextVariant()
+    public function test_context_exception_with_set_context_variant()
     {
         $this->expectException(ContextException::class);
         try {
